@@ -1,1 +1,1 @@
-{"user":{"budget":{"income":0,"spending":0}},"categories":[{"name":"Transport","status":"expense","budget":{"income":0,"spending":0}},{"name":"Salary","status":"income","budget":{"income":0,"spending":0}}]}
+{"user":{"username":"qwe","password":"asd","budget":{"now":0,"total":0}},"categories":[{"name":"Transport","type":"expense","budget":{"now":0,"total":0}},{"name":"Salary","type":"income","budget":{"now":0,"total":0}}]}

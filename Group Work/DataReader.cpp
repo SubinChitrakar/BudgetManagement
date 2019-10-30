@@ -32,15 +32,11 @@ json DataReader::readData() {
 }
 
 void DataReader::writeData(json& j) {
-	if (j == NULL) {
-
-	}
 	ofstream o(filename);
 	o << setw(4) << j << std::endl;
 }
 
 void DataReader::generateData() {
-	
-	//ofstream o(filename);
-	//o << setw(4) << data;
+	ofstream o(filename);
+	o << setw(4) << defaultData;
 }

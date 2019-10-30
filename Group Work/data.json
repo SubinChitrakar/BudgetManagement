@@ -1,25 +1,27 @@
 {
   "user": {
+	"username": "qwe",
+	"password": "asd",
     "budget": {
-      "income": 0,
-      "spending": 0
+      "now": 0,
+      "total": 0
     }
   },
   "categories": [
     {
       "name": "Transport",
-      "status": "expense",
+      "type": "expense",
       "budget": {
-        "income": 0,
-        "spending": 0
+        "now": 0,
+        "total": 0
       }
     },
     {
       "name": "Salary",
-      "status": "income",
+      "type": "income",
       "budget": {
-        "income": 0,
-        "spending": 0
+        "now": 0,
+        "total": 0
       }
     }
   ]

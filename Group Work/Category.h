@@ -9,15 +9,15 @@ class Category
 private:
 	string categoryName;
 	Budget categoryBudget;
-	string status;
+	string type;
 
 public:
 	string getCategoryName() { return categoryName; }
 	Budget getCategoryBudget() { return categoryBudget; }
-	string getstatus() { return status; }
+	string getType() { return type; }
 	void setCategoryName(string _categoryName) { categoryName = _categoryName; }
 	void setCategoryBudget(Budget _categoryBudget) { categoryBudget = _categoryBudget; }
-	void setStatus(string _status) { status = _status; }
+	void setType(string _type) { type = _type; }
 
 };
 

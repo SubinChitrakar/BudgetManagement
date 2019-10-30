@@ -12,7 +12,7 @@ class DataReader
 {
 private:
 	string filename = ".\\data";
-	string defaultData = "{\"user\":{\"budget\":{\"income\":0,\"spending\":0}},\"categories\":[{\"name\":\"Transport\",\"status\":\"expense\",\"budget\":{\"income\":0,\"spending\":0}},{\"name\":\"Salary\",\"status\":\"income\",\"budget\":{\"income\":0,\"spending\":0}}]}";
+	string defaultData = "{\"user\":{\"username\":\"qwe\",\"password\":\"asd\",\"budget\":{\"now\":0,\"total\":0}},\"categories\":[{\"name\":\"Transport\",\"type\":\"expense\",\"budget\":{\"now\":0,\"total\":0}},{\"name\":\"Salary\",\"type\":\"income\",\"budget\":{\"now\":0,\"total\":0}}]}";
 public:
 	json readData();
 	void writeData(json& j);

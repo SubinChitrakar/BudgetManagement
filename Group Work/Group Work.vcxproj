@@ -155,6 +155,7 @@
     <ClInclude Include="Budget.h" />
     <ClInclude Include="Category.h" />
     <ClInclude Include="CppConsoleTable.hpp" />
+    <ClInclude Include="DataConverter.h" />
     <ClInclude Include="DataReader.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="NormalTransaction.h" />
@@ -166,6 +167,7 @@
   <ItemGroup>
     <ClCompile Include="Budget.cpp" />
     <ClCompile Include="Category.cpp" />
+    <ClCompile Include="DataConverter.cpp" />
     <ClCompile Include="DataReader.cpp" />
     <ClCompile Include="Group Work.cpp" />
     <ClCompile Include="NormalTransaction.cpp" />

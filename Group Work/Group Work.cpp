@@ -8,24 +8,17 @@
 #include <stdio.h>
 #include "DataReader.h"
 #include "Budget.h"
+#include "User.h"
 
 typedef std::numeric_limits< double > dbl;
 
 using namespace std;
 
-Budget jsontoBudget(json& j) {
-	Budget b;
-	double d = j["income"];
-	printf("%.2f\n", d);
-	b.addIncome(j["income"]);
-	b.addSpending(j["spending"]);
-	return b;
-}
-
 int main()
 {
 	DataReader da;
 	json j = da.readData();
+	auto a = new User(j["user"]);
 	/*Budget b = jsontoBudget(j["budget"]);
 	j["aaa"] = "asdasd";
 	cout << b.getIncome() << endl;*/

@@ -1,15 +1,19 @@
 #pragma once
+#include "json.hpp"
 
-class Budget
-{
-private:
-	double income = 0;
-	double spending = 0;
-public:
-	double getIncome() { return income; }
-	double getSpending() { return spending; }
-	void addIncome(double _income) { income += _income; }
-	void addSpending(double _spending) { spending += _spending; }
-	void removeIncome(double _income) { income -= _income; }
-	void removeSpending(double _spending) { spending -= _spending; }
-};
+using nlohmann::json;
+
+	class Budget
+	{
+	public:
+		double total;
+		double now;
+		Budget() { };
+		Budget(json& j);
+		double getTotal() { return total; }
+		double getNow() { return now; }
+		void addTotal(double _total) { total += _total; }
+		void addNow(double _now) { now += _now; }
+		void removeTotal(double _total) { total -= _total; }
+		void removeNow(double _now) { now -= _now; }
+	};
