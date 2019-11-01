@@ -1,8 +1,4 @@
-// Group Work.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "pch.h"
-#include <iostream>
 #include <string>
 #include <stdio.h>
 #include "DataReader.h"
@@ -21,4 +17,5 @@ int main()
 	CategoryController categoryController;
 	categoryController.setCategoryList(dc.convertToClass(j));
 	categoryController.categoryFunctionMenu();
+
 }

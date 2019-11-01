@@ -57,6 +57,7 @@
     <ClInclude Include="DataReader.h">
       <Filter>Header Files\Extra</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="CppConsoleTable.hpp">
       <Filter>Header Files\Extra</Filter>
     </ClInclude>
@@ -74,6 +75,13 @@
     </ClInclude>
     <ClInclude Include="Time.h">
       <Filter>Header Files\Models</Filter>
+=======
+    <ClInclude Include="EncryptDecrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Authorization.h">
+      <Filter>Header Files</Filter>
+>>>>>>> abdu
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +115,7 @@
     <ClCompile Include="DataConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="CategoryController.cpp">
       <Filter>Source Files\Controllers</Filter>
     </ClCompile>
@@ -115,6 +124,13 @@
     </ClCompile>
     <ClCompile Include="Time.cpp">
       <Filter>Source Files\Models</Filter>
+=======
+    <ClCompile Include="EncryptDecrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Authorization.cpp">
+      <Filter>Source Files</Filter>
+>>>>>>> abdu
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
