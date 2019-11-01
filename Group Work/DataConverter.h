@@ -9,6 +9,6 @@ using namespace std;
 class DataConverter
 {
 public:
-	void convertToClass(json& j);
+	vector<Category> convertToClass(json& j);
 };
 

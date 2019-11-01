@@ -13,7 +13,6 @@ private:
 	string password;
 	Budget* userBudget;
 public:
-	User() {};
 	User(json& j);
 
 	string getUsername(){ return username; }

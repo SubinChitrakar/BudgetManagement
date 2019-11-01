@@ -1,8 +1,16 @@
 #include "pch.h"
 #include "User.h"
+#include "Category.h"
 #include "DataConverter.h"
+#include<iostream>
 
-void DataConverter::convertToClass(json& j) {
-	
+using namespace std;
 
+vector<Category> DataConverter::convertToClass(json& j) {
+	User* user = new User(j["user"]);
+	vector<Category> cat = {};
+	for (json::iterator it = j["categories"].begin(); it != j["categories"].end(); ++it) {
+		cat.push_back(Category(*it));
+	}
+	return cat;
 }

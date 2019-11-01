@@ -9,6 +9,7 @@
   },
   "categories": [
     {
+      "id":  1,
       "name": "Transport",
       "type": "expense",
       "budget": {
@@ -17,12 +18,23 @@
       }
     },
     {
+      "id": 2,
       "name": "Salary",
       "type": "income",
       "budget": {
         "now": 0,
         "total": 0
       }
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "name": "TFL rail",
+      "amount": 1.23,
+      "status": "expense",
+      "category": 1,
+      "note": "Travel to museum"
     }
   ]
 }
