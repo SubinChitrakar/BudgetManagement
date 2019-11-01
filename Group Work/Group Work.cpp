@@ -20,7 +20,6 @@ int main()
 	DataReader da;
 	json j = da.readData();
 	DataConverter dc;
-	vector<category> categoryList = dc.convertToClass(j);
 	auto a = new User(j["user"]);
 	/*Budget b = jsontoBudget(j["budget"]);
 	j["aaa"] = "asdasd";
