@@ -57,6 +57,12 @@
     <ClInclude Include="DataReader.h">
       <Filter>Header Files\Extra</Filter>
     </ClInclude>
+    <ClInclude Include="EncryptDecrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Authorization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -84,6 +90,12 @@
       <Filter>Source Files\Models</Filter>
     </ClCompile>
     <ClCompile Include="DataReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EncryptDecrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Authorization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
