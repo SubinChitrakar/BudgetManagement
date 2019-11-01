@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Extra">
       <UniqueIdentifier>{ea439f71-a6d3-4573-8af7-02a43cbad323}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Controllers">
+      <UniqueIdentifier>{273452b4-440d-4139-9ff9-c628b05c5d77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Controllers">
+      <UniqueIdentifier>{5b8be3a3-b16b-4636-b078-f6d52f504a34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
@@ -60,6 +66,15 @@
     <ClInclude Include="DataConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CategoryController.h">
+      <Filter>Header Files\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Group Work.cpp">
@@ -91,6 +106,15 @@
     </ClCompile>
     <ClCompile Include="DataConverter.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CategoryController.cpp">
+      <Filter>Source Files\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Source Files\Models</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

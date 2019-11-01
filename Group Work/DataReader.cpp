@@ -5,9 +5,6 @@
 #include <string>
 
 json DataReader::readData() {
-
-	cout << filename;
-
 	fstream ifs(filename, fstream::in | fstream ::out);
 
 	if (!ifs) {

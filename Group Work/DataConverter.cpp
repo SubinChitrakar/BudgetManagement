@@ -7,7 +7,6 @@
 using namespace std;
 
 vector<Category> DataConverter::convertToClass(json& j) {
-	User* user = new User(j["user"]);
 	vector<Category> cat = {};
 	for (json::iterator it = j["categories"].begin(); it != j["categories"].end(); ++it) {
 		cat.push_back(Category(*it));
