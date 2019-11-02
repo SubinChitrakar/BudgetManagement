@@ -5,9 +5,7 @@
 #include "DataConverter.h"
 #include "CategoryController.h"
 
-typedef std::numeric_limits< double > dbl;
 using namespace std;
-
 
 int main()
 {

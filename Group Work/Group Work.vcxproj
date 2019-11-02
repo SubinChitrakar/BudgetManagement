@@ -108,11 +108,15 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -178,7 +182,7 @@
     <ClCompile Include="DataConverter.cpp" />
     <ClCompile Include="DataReader.cpp" />
     <ClCompile Include="EncryptDecrypt.cpp" />
-    <ClCompile Include="Group Work.cpp" />
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="NormalTransaction.cpp" />
     <ClCompile Include="pch.cpp">

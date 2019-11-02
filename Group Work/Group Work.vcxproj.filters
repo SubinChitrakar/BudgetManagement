@@ -1,141 +1,112 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Source Files\Models">
-      <UniqueIdentifier>{f82a7d0e-61f8-4773-a1a0-5b892e92ad7c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Models">
-      <UniqueIdentifier>{f04a1abf-bd6b-4c55-9581-aeeb02f77389}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Extra">
-      <UniqueIdentifier>{2f5a5819-2e76-4bbe-bc68-bb94ef12b42e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Extra">
-      <UniqueIdentifier>{ea439f71-a6d3-4573-8af7-02a43cbad323}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Controllers">
-      <UniqueIdentifier>{273452b4-440d-4139-9ff9-c628b05c5d77}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Controllers">
-      <UniqueIdentifier>{5b8be3a3-b16b-4636-b078-f6d52f504a34}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="Authorization.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="Budget.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="Category.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="CategoryController.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataConverter.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataReader.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="EncryptDecrypt.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalTransaction.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="RecurringTransaction.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="Transaction.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Class files</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
-      <Filter>Header Files\Models</Filter>
-    </ClInclude>
-    <ClInclude Include="Budget.h">
-      <Filter>Header Files\Models</Filter>
-    </ClInclude>
-    <ClInclude Include="Category.h">
-      <Filter>Header Files\Models</Filter>
+      <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Transaction.h">
-      <Filter>Header Files\Models</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalTransaction.h">
-      <Filter>Header Files\Models</Filter>
-    </ClInclude>
-    <ClInclude Include="RecurringTransaction.h">
-      <Filter>Header Files\Models</Filter>
-    </ClInclude>
-    <ClInclude Include="json.hpp">
-      <Filter>Source Files\Extra</Filter>
-    </ClInclude>
-    <ClInclude Include="DataReader.h">
-      <Filter>Header Files\Extra</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="CppConsoleTable.hpp">
-      <Filter>Header Files\Extra</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files\Extra</Filter>
-    </ClInclude>
-    <ClInclude Include="DataConverter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CategoryController.h">
-      <Filter>Header Files\Controllers</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Header Files\Models</Filter>
+      <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Time.h">
-      <Filter>Header Files\Models</Filter>
-=======
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="RecurringTransaction.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
     <ClInclude Include="EncryptDecrypt.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataReader.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataConverter.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="CategoryController.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Category.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Budget.h">
+      <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Authorization.h">
-      <Filter>Header Files</Filter>
->>>>>>> abdu
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalTransaction.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="CppConsoleTable.hpp">
+      <Filter>Extra files</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Extra files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Group Work.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="User.cpp">
-      <Filter>Source Files\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="Budget.cpp">
-      <Filter>Source Files\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="Category.cpp">
-      <Filter>Source Files\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="Transaction.cpp">
-      <Filter>Source Files\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="NormalTransaction.cpp">
-      <Filter>Source Files\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="RecurringTransaction.cpp">
-      <Filter>Source Files\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="DataReader.cpp">
-      <Filter>Source Files\Extra</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files\Extra</Filter>
-    </ClCompile>
-    <ClCompile Include="DataConverter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="CategoryController.cpp">
-      <Filter>Source Files\Controllers</Filter>
-    </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Source Files\Models</Filter>
-    </ClCompile>
-    <ClCompile Include="Time.cpp">
-      <Filter>Source Files\Models</Filter>
-=======
-    <ClCompile Include="EncryptDecrypt.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Authorization.cpp">
-      <Filter>Source Files</Filter>
->>>>>>> abdu
-    </ClCompile>
+    <None Include="data.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="data.json">
-      <Filter>Source Files</Filter>
-    </None>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{7731fb31-0ff8-4f79-9c50-e46a49d1b6a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class files">
+      <UniqueIdentifier>{8ad696fe-9d77-42b2-bc68-fe1dd6728b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extra files">
+      <UniqueIdentifier>{e843899e-3c6d-4664-9111-6cf413c06f03}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
