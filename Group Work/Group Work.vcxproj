@@ -161,10 +161,12 @@
     <ClInclude Include="Budget.h" />
     <ClInclude Include="Category.h" />
     <ClInclude Include="CategoryController.h" />
+    <ClInclude Include="ConsoleIO.h" />
     <ClInclude Include="CppConsoleTable.hpp" />
     <ClInclude Include="DataConverter.h" />
     <ClInclude Include="DataReader.h" />
     <ClInclude Include="EncryptDecrypt.h" />
+    <ClInclude Include="InputTypes.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="NormalTransaction.h" />
@@ -179,6 +181,7 @@
     <ClCompile Include="Budget.cpp" />
     <ClCompile Include="Category.cpp" />
     <ClCompile Include="CategoryController.cpp" />
+    <ClCompile Include="ConsoleIO.cpp" />
     <ClCompile Include="DataConverter.cpp" />
     <ClCompile Include="DataReader.cpp" />
     <ClCompile Include="EncryptDecrypt.cpp" />

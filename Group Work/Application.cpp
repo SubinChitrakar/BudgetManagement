@@ -4,16 +4,23 @@
 #include "DataReader.h"
 #include "DataConverter.h"
 #include "CategoryController.h"
+#include "Authorization.h"
+#include "EncryptDecrypt.h"
+#include "ConsoleIO.h"
 
 using namespace std;
 
+EncryptDecrypt ecd;
+
 int main()
 {
-	DataReader da;
+	//ConsoleIO::out( ConsoleIO::in("Please, enter smth", TEXT, 3));
+	new Authorization(ecd);
+	/*DataReader da;
 	json j = da.readData();
 	DataConverter dc;
 	CategoryController categoryController;
 	categoryController.setCategoryList(dc.convertToClass(j));
 	categoryController.categoryFunctionMenu();
-
+	*/
 }

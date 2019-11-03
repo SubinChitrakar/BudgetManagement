@@ -4,27 +4,18 @@
 
 Authorization::Authorization(EncryptDecrypt& ecd) : ed(ecd)
 {
-	getPassword();
-	cout << "shit" << endl;
+	if (!ecd.checkFile()) {
+		string pw = ConsoleIO::in("Please, enter new password:", TEXT, 100, false, true);
+		ecd.generateData(pw);
+	} else getPassword();
 }
 
 void Authorization::getPassword() {
 	string pw;
 	do {
-		if (mistakes == 0) exit(EXIT_FAILURE);
-		string st = (mistakes == 3) ? "Please, enter your password." : "Please, enter valid password.";
-		cout << st << endl;
-		cin >> pw;
-	} while (!checkPassword(pw));
-}
-
-bool Authorization::checkPassword(string pw) {
-	ed.setKeySize(pw);
-	string data = ed.fileDecrypt();
-	if (data[0] != '{') {
-		mistakes--;
-		return false;
-	};
-	decryptedData = data;
-	return true;
+		if (mistakes >= 3) exit(EXIT_FAILURE);
+		string st = (mistakes == 0) ? "Please, enter your password." : "Please, enter valid password.";
+		pw = ConsoleIO::in(st, TEXT, 100, false, true);
+		mistakes++;
+	} while (!ed.checkPassword(pw));
 }
