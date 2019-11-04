@@ -16,7 +16,7 @@ string ConsoleIO::in(string data, InputTypes type, int size, bool isEnter, bool 
 	const char BACKSPACE = 8;
 	const char RETURN = 13;
 
-	string input = string();
+	string input = "";
 	unsigned char ch = 0;
 
 	checkType(type);
@@ -32,7 +32,7 @@ string ConsoleIO::in(string data, InputTypes type, int size, bool isEnter, bool 
 		switch (ch)
 		{
 		case RETURN:
-			if (isEnter) break;
+			if (isEnter) loop = false;
 			else if (input.size() > 0) loop = false;
 			else continue;
 			break;

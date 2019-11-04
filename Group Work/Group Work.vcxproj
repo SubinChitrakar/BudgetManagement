@@ -164,7 +164,6 @@
     <ClInclude Include="ConsoleIO.h" />
     <ClInclude Include="CppConsoleTable.hpp" />
     <ClInclude Include="DataConverter.h" />
-    <ClInclude Include="DataReader.h" />
     <ClInclude Include="EncryptDecrypt.h" />
     <ClInclude Include="InputTypes.h" />
     <ClInclude Include="json.hpp" />
@@ -183,7 +182,6 @@
     <ClCompile Include="CategoryController.cpp" />
     <ClCompile Include="ConsoleIO.cpp" />
     <ClCompile Include="DataConverter.cpp" />
-    <ClCompile Include="DataReader.cpp" />
     <ClCompile Include="EncryptDecrypt.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Menu.cpp" />

@@ -2,49 +2,46 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Authorization.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Budget.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Category.cpp">
-      <Filter>Class files</Filter>
-    </ClCompile>
-    <ClCompile Include="CategoryController.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="DataConverter.cpp">
-      <Filter>Class files</Filter>
-    </ClCompile>
-    <ClCompile Include="DataReader.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="EncryptDecrypt.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="NormalTransaction.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="RecurringTransaction.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Time.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Transaction.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="User.cpp">
-      <Filter>Class files</Filter>
+      <Filter>Model</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="ConsoleIO.cpp" />
+    <ClCompile Include="CategoryController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
@@ -66,9 +63,6 @@
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="EncryptDecrypt.h">
-      <Filter>Header files</Filter>
-    </ClInclude>
-    <ClInclude Include="DataReader.h">
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="DataConverter.h">
@@ -105,11 +99,14 @@
     <Filter Include="Header files">
       <UniqueIdentifier>{7731fb31-0ff8-4f79-9c50-e46a49d1b6a6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class files">
-      <UniqueIdentifier>{8ad696fe-9d77-42b2-bc68-fe1dd6728b6b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Extra files">
       <UniqueIdentifier>{e843899e-3c6d-4664-9111-6cf413c06f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{0bd1511b-5942-44d1-80eb-c50824a8aa68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{8ad696fe-9d77-42b2-bc68-fe1dd6728b6b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -12,6 +12,10 @@ public:
 		categoryList = JSONCategoryList;
 	}
 
+	vector<Category> getCategoryList() {
+		return categoryList;
+	}
+
 	void categoryFunctionMenu();
 	void viewCategoryList();
 	void addCategory();

@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CategoryController.h"
 #include <sstream>
+#include "ConsoleIO.h"
 
 void CategoryController::categoryFunctionMenu() {
 	
@@ -56,14 +57,13 @@ void CategoryController::addCategory() {
 	string categoryType;
 	bool status = true;
 
-	cout << "\t \t \t ADD CATEGORY" << endl;
-	cout << "Enter the name of the category: \t";
-	cin >> categoryName;
+	categoryName=ConsoleIO::in("\t \t \t ADD CATEGORY \n Enter the name of the category:");
 	cout << endl;
 	
-	cout << "Enter the budget of the category: \t";
-	cin >> budget;
+	budget = stod(ConsoleIO::in("Enter the budget of the category: ", AMOUNT));
 	cout << endl;
+
+	system("CLS");
 
 	do {
 		cout << "\t 1. Income" << endl;
@@ -104,33 +104,26 @@ void CategoryController::editCategory() {
 
 	} while (status);
 
-	//Clears console//
-	system("CLS");
-
 	Category editedCategory = categoryList.at(option);
 	string categoryName;
-	double budget;
+	string budgetValue;
 	int categoryValue;
-	bool categoryStatus = true;
-	
-	cout << "\t \t      EDIT CATEGORY" << endl << endl;
+	bool categoryStatus = true; 
 
-	cout << "\t Category Name: " + editedCategory.getCategoryName() << endl;
-	cout << "\t New Category Name (Enter \"NO\" and press return to not change the value): \t";
-	cin >> categoryName;
-	if (categoryName != "NO"){
+	categoryName = ConsoleIO::in("\t \t      EDIT CATEGORY \n Category Name: " + editedCategory.getCategoryName() + "\n New Category Name (Press return to not change the value): ", TEXT, 100, true);
+	if (categoryName.size() > 0){
 		editedCategory.setCategoryName(categoryName);
 	}
-	
-	cout << "\t Budget: " << editedCategory.getCategoryBudget()->getTotal() << endl;
-	cout << "\t New Category Budget: Enter \"0\" and press return to not change the value\t";
-	cin >> budget;
-	if (budget != 0) {
-		editedCategory.getCategoryBudget()->setTotal(budget);
+
+	budgetValue = ConsoleIO::in("\t Budget: " + to_string(editedCategory.getCategoryBudget()->getTotal()) + "\n New Budget (Press return to not change the value): ", AMOUNT, 100, true);
+	if (budgetValue.size() > 0) {
+		editedCategory.getCategoryBudget()->setTotal(stod(budgetValue));
 	}
 
-	cout << "\t Category Type: " << editedCategory.getType() << endl;
-	cout << "\t New Category Type: "<<endl;
+	system("CLS");
+
+	cout << "Category Type: " << editedCategory.getType() << endl;
+	cout << "New Category Type: "<<endl;
 	do {
 		cout << "\t 1. Income" << endl;
 		cout << "\t 2. Expense" << endl;
