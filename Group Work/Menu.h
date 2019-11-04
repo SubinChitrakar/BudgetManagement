@@ -1,10 +1,16 @@
-#pragma once
+#include "json.hpp"
+#include "CategoryController.h"
+#include "DataConverter.h"
+
 class Menu
 {
+private:
+	DataConverter dc;
+	CategoryController categoryController;
+	json& j;
+
 public:
-	void header();
-	void footer();
-	void displayIntro();
+	Menu(json& json) : j(json){}
 	void startMenu();
 };
 

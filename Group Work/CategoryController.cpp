@@ -4,10 +4,8 @@
 #include "ConsoleIO.h"
 
 void CategoryController::categoryFunctionMenu() {
-	
 	//clears console
 	system("CLS");
-
 
 	int option = 0;
 	viewCategoryList();
@@ -26,7 +24,7 @@ void CategoryController::categoryFunctionMenu() {
 		break;
 	case 3: deleteCategory();
 		break;
-	case 4: cout << "\t BACK TO MAIN MENU" << endl;
+	case 4: return;
 		break;
 	default: cout << "\t THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!"<<endl <<endl;
 		categoryFunctionMenu();
