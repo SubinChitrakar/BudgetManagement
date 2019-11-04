@@ -39,6 +39,9 @@
     <ClCompile Include="CategoryController.cpp">
       <Filter>Controller</Filter>
     </ClCompile>
+    <ClCompile Include="TransactionController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="ConsoleIO.h" />
     <ClInclude Include="InputTypes.h" />
+    <ClInclude Include="TransactionController.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="data.json" />

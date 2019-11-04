@@ -26,4 +26,7 @@ int main()
 
 	Menu* menu = new Menu(dc);
 	menu->startMenu();
+
+	
+
 }

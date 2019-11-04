@@ -50,7 +50,7 @@ void CategoryController::viewCategoryList() {
 void CategoryController::addCategory() {
 	//Clears console//
 	system("CLS");
-
+	
 	string categoryName;
 	double limit;
 	int categoryValue;
