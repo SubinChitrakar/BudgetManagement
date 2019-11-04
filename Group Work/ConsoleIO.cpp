@@ -45,7 +45,6 @@ string ConsoleIO::in(string data, InputTypes type, int size, bool isEnter, bool 
 			break;
 		case 0:
 		case 224:
-			_getch();
 			continue;
 			break;
 		default:
