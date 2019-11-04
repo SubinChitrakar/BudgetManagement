@@ -11,7 +11,6 @@ class Authorization
 private:
 	int mistakes = 0;
 	EncryptDecrypt& ed;
-	string decryptedData;
 public:
 	void getPassword();
 	Authorization(EncryptDecrypt& ecd);

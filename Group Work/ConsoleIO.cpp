@@ -39,7 +39,7 @@ string ConsoleIO::in(string data, InputTypes type, int size, bool isEnter, bool 
 		case BACKSPACE:
 			if (input.length() != 0)
 			{
-				if (!isSecret) cout << "\b \b";
+				cout << "\b \b";
 				input.resize(input.length() - 1);
 			}
 			break;

@@ -14,8 +14,9 @@ EncryptDecrypt ecd;
 
 int main()
 {
-	//ConsoleIO::out( ConsoleIO::in("Please, enter smth", TEXT, 3));
-	new Authorization(ecd);
+	Authorization* auth = new Authorization(ecd);
+	string data = ecd.getData();
+	ConsoleIO::out(data);
 	/*DataReader da;
 	json j = da.readData();
 	DataConverter dc;

@@ -11,7 +11,7 @@ void EncryptDecrypt::setKeySize(string key) {
 		if (keySizeString[i] != '1' && keySizeString[i] != '0') size += keySizeString[i];
 	}
 	istringstream(size) >> i;
-	keySize = i % 127;
+	keySize = (i % 94) + 1;
 }
 
 void EncryptDecrypt::fileEncrypt(string str, string key) {
@@ -23,7 +23,7 @@ void EncryptDecrypt::fileEncrypt(string str, string key) {
 
 	for (int i = 0; str[i] != '\0'; i++) {
 		now = int(str[i]) + keySize;
-		if (now > 127) now -= 127;
+		if (now > 126) now -= 95;
 		str[i] = now;
 	}
 
@@ -47,25 +47,22 @@ string EncryptDecrypt::passwordToKey(string pw) {
 		}
 		
 		val += sum;
-		if (val > 127) val -= 127;
+		if (val > 126) val -= 95;
+		if (val < 32) val += 95;
 		pw[i] = val;
 	}
 
 	return pw;
 }
 
-string EncryptDecrypt::fileDecrypt() {
-	int now, last;
-
-	string data = readFile();
-
-	if (data == "") return defaultData;
+string EncryptDecrypt::fileDecrypt(string data) {
+	int now;
 
 	for (int i = 0; data[i] != '\0'; i++) {
 		now = int(data[i]);
-		if (now < 75) now += 127;
-		last = now - keySize;
-		data[i] = last;
+		now -= keySize;
+		if (now < 32) now += 95;
+		data[i] = now;
 	}
 
 	return data;
@@ -82,10 +79,12 @@ string EncryptDecrypt::readFile() {
 		return "";
 	}
 	string str((istreambuf_iterator<char>(t)), istreambuf_iterator<char>());
+	cout << str.size() << endl;
 	return str;
 }
 
 void EncryptDecrypt::generateData(string pw) {
+	decryptedData = defaultData;
 	fileEncrypt(defaultData, pw);
 }
 
@@ -99,7 +98,12 @@ bool EncryptDecrypt::checkPassword(string pw) {
 		stored += data[i];
 	}
 
-	if (stored == key) return true;
+	if (stored == key) {
+		data.erase(0, pw.size());
+		setKeySize(pw);
+		decryptedData = fileDecrypt(data);
+		return true;
+	}
 	else return false;
 }
 
