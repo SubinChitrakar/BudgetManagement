@@ -25,5 +25,10 @@ public:
 	string findDayOfWeek(int day, int month, int year);
 
 	string getCurrentDateAndTime();
-};
 
+
+	void convertToDate(string date);
+	void convertToTime(string time);
+
+	tm getNewTime() { return newtime; }
+};

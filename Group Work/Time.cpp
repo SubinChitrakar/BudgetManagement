@@ -79,9 +79,44 @@ string Time::findDayOfWeek(int day, int month, int year) {
 }
 
 string Time::getCurrentDateAndTime() {
-	string currentTimeAndDate = getCurrentTime()+" "+getDayofWeek()+" "+getCurrentDate();
+	string currentTimeAndDate = getCurrentTime() + " " + getCurrentDate();
 	return currentTimeAndDate;
 }
 
+/*
+	Convert the Dates and saves it into newTime
+*/
+void Time::convertToDate(string date) {
+	string delimiterForDate = "/";
+	int pos = 0;
+	pos = date.find(delimiterForDate);
+	string day = date.substr(0, pos);
+	date.erase(0, pos + delimiterForDate.length());
 
+	pos = date.find(delimiterForDate);
+	string month = date.substr(0, pos);
+	date.erase(0, pos + delimiterForDate.length());
 
+	string year = date;
+
+	newtime.tm_mday = stoi(day);
+	newtime.tm_mon = stoi(month);
+	newtime.tm_year = stoi(year);
+
+}
+
+/*
+	Converts the time and saves it into newTime
+*/
+void Time::convertToTime(string time) {
+	string delimiterForDate = ":";
+	
+	int pos = 0;
+	pos = time.find(delimiterForDate);
+	string hours = time.substr(0, pos);
+	time.erase(0, pos + delimiterForDate.length());
+
+	string minutes = time;
+	newtime.tm_hour = stoi(hours);
+	newtime.tm_min = stoi(minutes);
+}

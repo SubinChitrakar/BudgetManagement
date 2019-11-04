@@ -1,2 +1,4 @@
-﻿  CategoryController.cpp
+﻿  Application.cpp
+h:\software design\budgetmanagement\group work\application.cpp(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+h:\software design\budgetmanagement\group work\application.cpp(37): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   Group Work.vcxproj -> H:\Software Design\BudgetManagement\x64\Debug\Group Work.exe

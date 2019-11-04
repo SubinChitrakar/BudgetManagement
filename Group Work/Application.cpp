@@ -25,4 +25,7 @@ int main()
 
 	Menu* menu = new Menu(j);
 	menu->startMenu();
+
+	
+
 }

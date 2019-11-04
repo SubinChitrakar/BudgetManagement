@@ -1,13 +1,15 @@
 #pragma once
+#include "Transaction.h"
+#include "Time.h"
 
-class NormalTransaction
+class NormalTransaction : public Transaction
 {
-public:
-	int time;
-
 private:
+	Time* time;
 
-	int getTime() { return time; }
-	void setTime(int _time) { time = _time; }
+public:
+	NormalTransaction(int id, string name, double amount, Category* cat, string note, Time* time);
+	Time* getTime() { return time; }
+	void setTime(Time* _time) { time = _time; }
 };
 
