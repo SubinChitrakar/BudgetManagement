@@ -8,7 +8,7 @@ using namespace std;
 
 void Menu::startMenu() {
 	int menuChoice;
-	cout << "\t \t     >> Menu \n \n";
+	cout << ">> Menu" <<endl;
 
 	cout << "1. Transaction" << endl;
 	cout << "2. Category  " << endl;
@@ -16,6 +16,8 @@ void Menu::startMenu() {
 
 	cout << "\n \t Enter your choice: ";
 	cin >> menuChoice;
+
+	cout << endl <<endl;
 
 	switch (menuChoice) {
 	case 1: "Transaction";
@@ -26,9 +28,8 @@ void Menu::startMenu() {
 		break;
 	case 3: "Report";
 		break;
-	default: cout << "\t THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!" << endl << endl;
+	default: cout << "THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!" << endl << endl;
 	}
-	system("CLS");
 	startMenu();
 }
 

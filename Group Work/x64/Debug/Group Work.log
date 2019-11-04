@@ -1,3 +1,2 @@
-﻿  Menu.cpp
-h:\software design\budgetmanagement\group work\menu.cpp(33): warning C4717: 'Menu::startMenu': recursive on all control paths, function will cause runtime stack overflow
+﻿  CategoryController.cpp
   Group Work.vcxproj -> H:\Software Design\BudgetManagement\x64\Debug\Group Work.exe

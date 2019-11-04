@@ -19,16 +19,17 @@ void CategoryController::categoryFunctionMenu() {
 	cout << endl << endl;
 	switch (option) {
 	case 1: addCategory();
-		break;
+			break;
 	case 2: editCategory();
-		break;
+			break;
 	case 3: deleteCategory();
-		break;
-	case 4: return;
-		break;
+			break;
+	case 4: system("CLS");
+			return;
+			break;
 	default: cout << "\t THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!"<<endl <<endl;
-		categoryFunctionMenu();
 	}
+	categoryFunctionMenu();
 
 }
 
@@ -55,7 +56,7 @@ void CategoryController::addCategory() {
 	string categoryType;
 	bool status = true;
 
-	categoryName=ConsoleIO::in("\t \t \t ADD CATEGORY \n Enter the name of the category:");
+	categoryName=ConsoleIO::in("\t \t \t ADD CATEGORY \nEnter the name of the category:");
 	cout << endl;
 	
 	budget = stod(ConsoleIO::in("Enter the budget of the category: ", AMOUNT));
@@ -77,8 +78,6 @@ void CategoryController::addCategory() {
 	categoryValue == 1 ? categoryType = "Income" : categoryType = "Expense";
 
 	categoryList.push_back(Category(categoryList.back().getId() + 1, categoryName, budget, categoryType));
-
-	categoryFunctionMenu();
 }
 
 
@@ -139,7 +138,6 @@ void CategoryController::editCategory() {
 	categoryValue == 2 ? editedCategory.getType() = "Expense" : editedCategory.getType() = editedCategory.getType();
 
 	categoryList.at(option) = editedCategory;
-	categoryFunctionMenu();
 }
 
 void CategoryController::deleteCategory() {
@@ -163,7 +161,5 @@ void CategoryController::deleteCategory() {
 	} while (status);
 
 	categoryList.erase(categoryList.begin() + option);
-
-	categoryFunctionMenu();
 }
 
