@@ -23,13 +23,14 @@ void Menu::startMenu() {
 	case 1: "Transaction";
 		break;
 	case 2: 
-		categoryController.setCategoryList(dc.convertToClass(j));
-		categoryController.categoryFunctionMenu();
+		categoryController.setCategoryList(dc->convertToCategory());
+		categoryController.categoryFunctionMenu(dc);
 		break;
 	case 3: "Report";
 		break;
 	default: cout << "THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!" << endl << endl;
 	}
+	
 	startMenu();
 }
 

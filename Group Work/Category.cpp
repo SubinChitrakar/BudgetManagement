@@ -5,13 +5,21 @@ Category::Category(json& j) {
 	id = j["id"].get<int>();
 	categoryName = j["name"].get<string>();
 	type = j["type"].get<string>();
-	categoryBudget = new Budget(j["budget"]);
+	limit = j["limit"].get<double>();
 }
 
-Category::Category(int categoryId, string name, double budget, string categoryType) {
+Category::Category(int categoryId, string name, double categoryLimit, string categoryType) {
 	id = categoryId;
 	categoryName = name;
-	categoryBudget = new Budget();
-	categoryBudget->setTotal(budget);
 	type = categoryType;
+	limit = categoryLimit;
+}
+
+json Category::getCategory() {
+	json j;
+	j["id"] = id;
+	j["name"] = categoryName;
+	j["type"] = type;
+	j["limit"] = limit;
+	return j;
 }

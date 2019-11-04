@@ -3,7 +3,7 @@
 #include <sstream>
 #include "ConsoleIO.h"
 
-void CategoryController::categoryFunctionMenu() {
+void CategoryController::categoryFunctionMenu(DataConverter* dc) {
 	//clears console
 	system("CLS");
 
@@ -29,7 +29,8 @@ void CategoryController::categoryFunctionMenu() {
 			break;
 	default: cout << "\t THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!"<<endl <<endl;
 	}
-	categoryFunctionMenu();
+	dc->convertFromCategory(getCategoryList());
+	categoryFunctionMenu(dc);
 
 }
 
@@ -39,7 +40,7 @@ void CategoryController::viewCategoryList() {
 	int count = 1;
 	for (Category& category : categoryList)
 	{
-		cout << "\t  " << count << ". " << category.getCategoryName() << "\t \t" << category.getCategoryBudget()->getTotal() << endl;
+		cout << "\t  " << count << ". " << category.getCategoryName() << "\t \t" << category.getLimit() << endl;
 		count++;
 	}
 	cout << endl << endl;
@@ -51,7 +52,7 @@ void CategoryController::addCategory() {
 	system("CLS");
 
 	string categoryName;
-	double budget;
+	double limit;
 	int categoryValue;
 	string categoryType;
 	bool status = true;
@@ -59,7 +60,7 @@ void CategoryController::addCategory() {
 	categoryName=ConsoleIO::in("\t \t \t ADD CATEGORY \nEnter the name of the category:");
 	cout << endl;
 	
-	budget = stod(ConsoleIO::in("Enter the budget of the category: ", AMOUNT));
+	limit = stod(ConsoleIO::in("Enter the budget limit of the category: ", AMOUNT));
 	cout << endl;
 
 	system("CLS");
@@ -77,7 +78,7 @@ void CategoryController::addCategory() {
 	} while (status);
 	categoryValue == 1 ? categoryType = "Income" : categoryType = "Expense";
 
-	categoryList.push_back(Category(categoryList.back().getId() + 1, categoryName, budget, categoryType));
+	categoryList.push_back(Category(categoryList.back().getId() + 1, categoryName, limit, categoryType));
 }
 
 
@@ -112,9 +113,9 @@ void CategoryController::editCategory() {
 		editedCategory.setCategoryName(categoryName);
 	}
 
-	budgetValue = ConsoleIO::in("\tBudget: " + to_string(editedCategory.getCategoryBudget()->getTotal()) + "\nNew Budget (Press return to not change the value): ", AMOUNT, 100, true);
+	budgetValue = ConsoleIO::in("\tBudget limit: " + to_string(editedCategory.getLimit()) + "\nNew Budget (Press return to not change the value): ", AMOUNT, 100, true);
 	if (budgetValue.size() > 0) {
-		editedCategory.getCategoryBudget()->setTotal(stod(budgetValue));
+		editedCategory.setLimit(stod(budgetValue));
 	}
 
 	system("CLS");

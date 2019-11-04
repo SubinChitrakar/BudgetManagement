@@ -158,7 +158,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Authorization.h" />
-    <ClInclude Include="Budget.h" />
     <ClInclude Include="Category.h" />
     <ClInclude Include="CategoryController.h" />
     <ClInclude Include="ConsoleIO.h" />
@@ -177,7 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Authorization.cpp" />
-    <ClCompile Include="Budget.cpp" />
     <ClCompile Include="Category.cpp" />
     <ClCompile Include="CategoryController.cpp" />
     <ClCompile Include="ConsoleIO.cpp" />

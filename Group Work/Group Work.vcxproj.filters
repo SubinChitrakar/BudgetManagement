@@ -4,9 +4,6 @@
     <ClCompile Include="Authorization.cpp">
       <Filter>Model</Filter>
     </ClCompile>
-    <ClCompile Include="Budget.cpp">
-      <Filter>Model</Filter>
-    </ClCompile>
     <ClCompile Include="Category.cpp">
       <Filter>Model</Filter>
     </ClCompile>
@@ -72,9 +69,6 @@
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Category.h">
-      <Filter>Header files</Filter>
-    </ClInclude>
-    <ClInclude Include="Budget.h">
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Authorization.h">

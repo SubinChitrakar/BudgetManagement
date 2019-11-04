@@ -6,6 +6,7 @@
 #include "Authorization.h"
 #include "EncryptDecrypt.h"
 #include "ConsoleIO.h"
+#include "DataConverter.h"
 #include "json.hpp"
 
 
@@ -18,11 +19,11 @@ EncryptDecrypt ecd;
 int main()
 {
 	Authorization* auth = new Authorization(ecd);
-
 	string data = ecd.getData();
-	ConsoleIO::out(data);
 	json j = json::parse(data);
 
-	Menu* menu = new Menu(j);
+	DataConverter* dc = new DataConverter(j, ecd);
+
+	Menu* menu = new Menu(dc);
 	menu->startMenu();
 }

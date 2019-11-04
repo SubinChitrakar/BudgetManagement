@@ -1,4 +1,5 @@
-﻿#include "pch.h"
+﻿
+#include "pch.h"
 #include "EncryptDecrypt.h"
 
 void EncryptDecrypt::setKeySize(string key) {
@@ -79,13 +80,14 @@ string EncryptDecrypt::readFile() {
 		return "";
 	}
 	string str((istreambuf_iterator<char>(t)), istreambuf_iterator<char>());
-	cout << str.size() << endl;
 	return str;
 }
 
 void EncryptDecrypt::generateData(string pw) {
-	decryptedData = defaultData;
-	fileEncrypt(defaultData, pw);
+	char* data = new char[defaultData.size() + pw.size() + 32];
+	sprintf(data, defaultData.c_str(), pw.c_str());
+	decryptedData = data;
+	fileEncrypt(decryptedData, pw);
 }
 
 bool EncryptDecrypt::checkPassword(string pw) {

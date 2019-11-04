@@ -2,7 +2,7 @@
 #include "User.h"
 
 User::User(json& j) {
-	username = j["username"].get<string>();
+	lastAccess = j["last_access"].get<string>();
 	password = j["password"].get<string>();
-	userBudget = new Budget(j["budget"]);
+	limit = j["limit"].get<double>();
 }

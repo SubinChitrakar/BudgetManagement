@@ -1,4 +1,7 @@
 #pragma once
+
+#define _CRT_SECURE_NO_WARNINGS
+
 #include<iostream>
 #include <fstream>
 #include <streambuf>
@@ -15,7 +18,7 @@ private:
 	string filename = "./data";
 	int keySize;
 	string decryptedData;
-	string defaultData = "{\"user\":{\"username\":\"\",\"password\":\"\",\"budget\":{\"now\":0,\"total\":0}},\"categories\":[{\"id\":1,\"name\":\"Transport\",\"type\":\"expense\",\"budget\":{\"now\":0,\"total\":0}},{\"id\":2,\"name\":\"Salary\",\"type\":\"income\",\"budget\":{\"now\":0,\"total\":0}}],\"transactions\":[]}";
+	string defaultData = "{\"user\":{\"last_access\":\"\",\"password\":\"%s\",\"limit\":200},\"categories\":[{\"id\":1,\"name\":\"Transport\",\"type\":\"expense\",\"limit\":100},{\"id\":2,\"name\":\"Salary\",\"type\":\"income\",\"limit\": 100}],\"transactions\":[]}";
 public:
 	string& getData() { return decryptedData; };
 	bool checkFile();
