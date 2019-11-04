@@ -89,7 +89,7 @@ void CategoryController::editCategory() {
 	bool status = true;
 	do {
 		cout << "\t \t \t EDIT CATEGORY" << endl;
-		cout << "\t Enter the number of the category you want to edit: \t";
+		cout << "\tEnter the number of the category you want to edit: \t";
 		cin >> option;
 		option -= 1;
 
@@ -99,7 +99,7 @@ void CategoryController::editCategory() {
 		}
 		else {
 			cout << endl << endl;
-			cout << "\t THE CATEGORY NUMBER DOES NOT EXIST. \t" << endl;
+			cout << "\tTHE CATEGORY NUMBER DOES NOT EXIST. \t" << endl;
 		}
 
 	} while (status);
@@ -110,12 +110,12 @@ void CategoryController::editCategory() {
 	int categoryValue;
 	bool categoryStatus = true; 
 
-	categoryName = ConsoleIO::in("\t \t      EDIT CATEGORY \n Category Name: " + editedCategory.getCategoryName() + "\n New Category Name (Press return to not change the value): ", TEXT, 100, true);
+	categoryName = ConsoleIO::in("\t \t      EDIT CATEGORY \nCategory Name: " + editedCategory.getCategoryName() + "\nNew Category Name (Press return to not change the value): ", TEXT, 100, true);
 	if (categoryName.size() > 0){
 		editedCategory.setCategoryName(categoryName);
 	}
 
-	budgetValue = ConsoleIO::in("\t Budget: " + to_string(editedCategory.getCategoryBudget()->getTotal()) + "\n New Budget (Press return to not change the value): ", AMOUNT, 100, true);
+	budgetValue = ConsoleIO::in("\tBudget: " + to_string(editedCategory.getCategoryBudget()->getTotal()) + "\nNew Budget (Press return to not change the value): ", AMOUNT, 100, true);
 	if (budgetValue.size() > 0) {
 		editedCategory.getCategoryBudget()->setTotal(stod(budgetValue));
 	}
@@ -149,7 +149,7 @@ void CategoryController::deleteCategory() {
 	bool status = true;
 	do {
 		cout << "\t \t \t DELETE CATEGORY" << endl;
-		cout << "\t Enter the number of the category you want to delete: \t";
+		cout << "\tEnter the number of the category you want to delete: \t";
 		cin >> option;
 		option -= 1;
 
@@ -159,7 +159,7 @@ void CategoryController::deleteCategory() {
 		}
 		else {
 			cout << endl << endl;
-			cout << "\t THE CATEGORY NUMBER DOES NOT EXIST. \t"<<endl;
+			cout << "\tTHE CATEGORY NUMBER DOES NOT EXIST. \t"<<endl;
 		}
 		
 	} while (status);
