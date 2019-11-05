@@ -1,13 +1,15 @@
 #include "json.hpp"
-#include "CategoryController.h"
+#include "ConsoleIO.h"
 #include "DataConverter.h"
-#include "EncryptDecrypt.h"
+#include "CategoryController.h"
+#include "TransactionController.h"
 
 class Menu
 {
 private:
 	DataConverter* dc;
 	CategoryController categoryController;
+	TransactionController transactionController;
 
 public:
 	Menu(DataConverter* dca) {dc = dca;}

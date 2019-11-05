@@ -14,9 +14,11 @@ private:
 	static bool number; 
 	static bool symbol; 
 	static bool dot;
+	static bool isDot;
 	static void checkType(InputTypes &type);
 public:
-	static void out(string data = "", bool newLine = true);
-	static string in(string data, InputTypes type = TEXT, int size = 100, bool isEnter = false, bool isSecret = false);
+	static void out(string data = "", bool clear = false);
+	static string in(string data, InputTypes type = TEXT, int size = 100, bool isEnter = false, bool isSecret = false, bool isEsc = false);
+	static string dbl(double num);
 };
 

@@ -11,10 +11,35 @@ vector<Category> DataConverter::convertToCategory() {
 	return cat;
 }
 
+vector<NormalTransaction> DataConverter::convertToNormalTransaction(vector<Category>& catList) {
+	vector<NormalTransaction> tr = {};
+	for (json::iterator it = j["transactions"]["normal"].begin(); it != j["transactions"]["normal"].end(); ++it) {
+		Category* c = new Category();
+		cout << (*it);
+		for (vector<Category>::iterator i = catList.begin(); i != catList.end(); ++i) {
+			int index = distance(catList.begin(), i) + 1;
+			if ((*i).getId() == (*it)["category"]) {
+				c = &catList[index];
+				break;
+			}
+		}
+		tr.push_back(NormalTransaction(*it, *c));
+	}
+	return tr;
+}
+
 void DataConverter::convertFromCategory(vector<Category> categoryList) {
 	j["categories"].clear();
 	for (auto i = categoryList.begin(); i != categoryList.end(); ++i) {
 		j["categories"].push_back((*i).getCategory());
+	}
+	saveData();
+}
+
+void DataConverter::convertFromNormalTransaction(vector<NormalTransaction>& normalTransactionList) {
+	j["transactions"]["normal"].clear();
+	for (auto i = normalTransactionList.begin(); i != normalTransactionList.end(); ++i) {
+		j["transactions"]["normal"].push_back((*i).getNormalTransaction());
 	}
 	saveData();
 }

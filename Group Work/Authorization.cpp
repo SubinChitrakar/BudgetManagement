@@ -14,7 +14,7 @@ void Authorization::getPassword() {
 	string pw;
 	do {
 		if (mistakes >= 3) exit(EXIT_FAILURE);
-		string st = (mistakes == 0) ? "Please, enter your password." : "Please, enter valid password.";
+		string st = (mistakes == 0) ? "Please, enter your password:" : "Please, enter valid password:";
 		pw = ConsoleIO::in(st, TEXT, 100, false, true);
 		mistakes++;
 	} while (!ed.checkPassword(pw));

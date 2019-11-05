@@ -13,6 +13,8 @@ private:
 	string note;
 
 public:
+	Transaction() {};
+	Transaction(json& j);
 	Transaction(int id, string name, double amount, Category* cat, string note);
 	int getId() { return id; }
 	string getTransactionName() { return transactionName; }
@@ -21,7 +23,7 @@ public:
 	string getNote() { return note; }
 
 	void setId(int _id) { id = _id; }
-	void settransactionName(string _transactionName) { transactionName = _transactionName; }
+	void setTransactionName(string _transactionName) { transactionName = _transactionName; }
 	void setAmount(double _amount) { amount = _amount; }
 	void setCategory(Category* _category) { category = _category; }
 	void setNote(string _note) { note = _note; }

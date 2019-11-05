@@ -13,6 +13,7 @@ private:
 	string type;
 	double limit;
 public:
+	Category() {};
 	Category(json& j);
 	Category(int categoryId,string name, double budget, string categoryType);
 	json getCategory();

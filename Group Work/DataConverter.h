@@ -8,6 +8,7 @@
 #include "Category.h"
 #include "User.h"
 #include "Category.h"
+#include "NormalTransaction.h"
 
 using nlohmann::json;
 using namespace std;
@@ -21,6 +22,8 @@ private:
 public:
 	DataConverter(json& json, EncryptDecrypt& ecd) : j(json),ec(ecd) {};
 	vector<Category> convertToCategory();
+	vector<NormalTransaction> convertToNormalTransaction(vector<Category>& catList);
 	void convertFromCategory(vector<Category> categoryList);
+	void convertFromNormalTransaction(vector<NormalTransaction>& normalTransactionList);
 };
 

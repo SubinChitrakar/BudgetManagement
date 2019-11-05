@@ -1,22 +1,16 @@
 #include "pch.h"
 #include "CategoryController.h"
-#include <sstream>
-#include "ConsoleIO.h"
 
 void CategoryController::categoryFunctionMenu(DataConverter* dc) {
-	//clears console
-	system("CLS");
 
 	int option = 0;
+
 	viewCategoryList();
-	cout << "ENTER THE FUNCTIONALITY YOU WANT TO CONTINUE.."<<endl;
-	cout << "\t 1. Add a new Categories" << endl;
-	cout << "\t 2. Edit a Category" << endl;
-	cout << "\t 3. Delete a Category" << endl;
-	cout << "\t 4. Go back to the Menu" << endl;
-	cout << "\t ENTER THE NO. OF THE FUNCTION(1-4): \t";
-	cin >> option;
-	cout << endl << endl;
+
+	ConsoleIO::out("1.Add   2.Edit   3.Delete   4.Go back\n");
+
+	option = stoi(ConsoleIO::in("Please, choose menu item to continue:", NUMBER, 1));
+
 	switch (option) {
 	case 1: addCategory();
 			break;
@@ -24,11 +18,10 @@ void CategoryController::categoryFunctionMenu(DataConverter* dc) {
 			break;
 	case 3: deleteCategory();
 			break;
-	case 4: system("CLS");
-			return;
+	case 4:return;
 			break;
-	default: cout << "\t THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!"<<endl <<endl;
 	}
+
 	dc->convertFromCategory(getCategoryList());
 	categoryFunctionMenu(dc);
 
@@ -36,107 +29,119 @@ void CategoryController::categoryFunctionMenu(DataConverter* dc) {
 
 
 void CategoryController::viewCategoryList() {
-	cout << "LIST OF CATEGORY" << endl;
+	ConsoleTable table(samilton::Alignment::centre);
+
+	table.setIndent(1, 1);
+	
+	table[0][0] = "#";
+	table[0][1] = "Name";
+	table[0][2] = "Amount (GBP/per month)";
+	table[0][3] = "Type";
+
+	ConsoleIO::out({}, true);
 	int count = 1;
 	for (Category& category : categoryList)
 	{
-		cout << "\t  " << count << ". " << category.getCategoryName() << "\t \t" << category.getLimit() << endl;
+		table[count][0] = to_string(count);
+		table[count][1] = category.getCategoryName();
+		table[count][2] = ConsoleIO::dbl(category.getLimit());
+		table[count][3] = category.getType();
 		count++;
 	}
-	cout << endl << endl;
+	cout << table;
 }
 
 
 void CategoryController::addCategory() {
-	//Clears console//
-	system("CLS");
-	
 	string categoryName;
 	double limit;
-	int categoryValue;
 	string categoryType;
 	bool status = true;
 
-	categoryName=ConsoleIO::in("\t \t \t ADD CATEGORY \nEnter the name of the category:");
-	cout << endl;
-	
-	limit = stod(ConsoleIO::in("Enter the budget limit of the category: ", AMOUNT));
-	cout << endl;
+	string info = "ADD CATEGORY\nPress ESC button to cancel the operation.\n";
 
-	system("CLS");
+	ConsoleIO::out(info, true);
+	categoryName=ConsoleIO::in("Please, enter category name:", TEXT, 100, false, false, true);
+	if (categoryName == " ") return;
+
+	ConsoleIO::out(info, true);
+	string limitIn = ConsoleIO::in("Enter the budget limit for the category: ", AMOUNT, 8, false, false, true);
+	if (limitIn == " ") return;
+	else limit = stod(limitIn);
 
 	do {
-		cout << "\t 1. Income" << endl;
-		cout << "\t 2. Expense" << endl;
-		cout << "Enter the type of the category(1 or 2): \t";
-		cin >> categoryValue;
-		
-		if (categoryValue == 1 || categoryValue == 2)
-		{
-			status = false;
+		ConsoleIO::out(info, true);
+		string typeIn = ConsoleIO::in("Please, choose category type:\n1.Income\n2.Expense", NUMBER, 1, false, false, true);
+		if (typeIn == " ") return;
+		else {
+			int catVal = stoi(typeIn);
+			if (catVal == 1 || catVal == 2) {
+				catVal == 1 ? categoryType = "Income" : categoryType = "Expense";
+				status = false;
+			}
 		}
 	} while (status);
-	categoryValue == 1 ? categoryType = "Income" : categoryType = "Expense";
 
-	categoryList.push_back(Category(categoryList.back().getId() + 1, categoryName, limit, categoryType));
+	if (status) return;
+
+	int id = (categoryList.size() > 0) ? categoryList.back().getId() + 1 : 1;
+
+	categoryList.push_back(Category(id, categoryName, limit, categoryType));
 }
 
 
 void CategoryController::editCategory() {
 	int option;
 	bool status = true;
-	do {
-		cout << "\t \t \t EDIT CATEGORY" << endl;
-		cout << "\tEnter the number of the category you want to edit: \t";
-		cin >> option;
-		option -= 1;
+	string info = "EDIT CATEGORY";
+	string info_2 = "\nPress ESC to cancel the operation.\n";
 
-		if (option >= 0 && option < categoryList.size())
-		{
-			status = false;
-		}
-		else {
-			cout << endl << endl;
-			cout << "\tTHE CATEGORY NUMBER DOES NOT EXIST. \t" << endl;
-		}
+	do {
+		viewCategoryList();
+		ConsoleIO::out("\n" + info + info_2);
+		string numIn = ConsoleIO::in("Please, enter the number of category:", NUMBER, 3, false, false, true);
+
+		if (numIn == " ") return;
+
+		option = stoi(numIn) - 1;
+
+		if (option >= 0 && option < categoryList.size()) status = false;
 
 	} while (status);
 
 	Category editedCategory = categoryList.at(option);
 	string categoryName;
 	string budgetValue;
-	int categoryValue;
 	bool categoryStatus = true; 
 
-	categoryName = ConsoleIO::in("\t \t      EDIT CATEGORY \nCategory Name: " + editedCategory.getCategoryName() + "\nNew Category Name (Press return to not change the value): ", TEXT, 100, true);
+	ConsoleIO::out(info + ": " + editedCategory.getCategoryName() + info_2, true);
+
+	categoryName = ConsoleIO::in("Please, enter category name (press Enter to leave current name): ", TEXT, 100, true, false, true);
+	if (categoryName == " ") return;
 	if (categoryName.size() > 0){
 		editedCategory.setCategoryName(categoryName);
 	}
 
-	budgetValue = ConsoleIO::in("\tBudget limit: " + to_string(editedCategory.getLimit()) + "\nNew Budget (Press return to not change the value): ", AMOUNT, 100, true);
+	ConsoleIO::out(info + ": " + editedCategory.getCategoryName() + info_2, true);
+	budgetValue = ConsoleIO::in("Current budget limit: " + ConsoleIO::dbl(editedCategory.getLimit()) + "\nPlease, enter new amount (press Enter to leave current amount): ", AMOUNT, 8, true, false, true);
+	if (budgetValue == " ") return;
 	if (budgetValue.size() > 0) {
 		editedCategory.setLimit(stod(budgetValue));
 	}
 
-	system("CLS");
-
-	cout << "Category Type: " << editedCategory.getType() << endl;
-	cout << "New Category Type: "<<endl;
 	do {
-		cout << "\t 1. Income" << endl;
-		cout << "\t 2. Expense" << endl;
-		cout << "\t 3. No Change" << endl;
-		cout << "\t Enter the type of the category(1 or 2 or 3): \t";
-		cin >> categoryValue;
-
-		if (categoryValue == 1 || categoryValue == 2 || categoryValue == 3)
-		{
-			categoryStatus = false;
+		ConsoleIO::out(info + ": " + editedCategory.getCategoryName() + info_2, true);
+		string typeIn = ConsoleIO::in("Please, choose category type (press Enter to leave current type):\n1.Income\n2.Expense", NUMBER, 1, true, false, true);
+		if (typeIn == " ") return;
+		else if (typeIn.size() > 0) {
+			int catVal = stoi(typeIn);
+			if (catVal == 1 || catVal == 2) {
+				editedCategory.setType((catVal == 1) ? "Income" : "Expense");
+				categoryStatus = false;
+			}
 		}
+		else if (typeIn.size() == 0) categoryStatus = false;
 	} while (categoryStatus);
-
-	categoryValue == 1 ? editedCategory.getType() = "Income" : editedCategory.getType() = editedCategory.getType();
-	categoryValue == 2 ? editedCategory.getType() = "Expense" : editedCategory.getType() = editedCategory.getType();
 
 	categoryList.at(option) = editedCategory;
 }
@@ -144,21 +149,16 @@ void CategoryController::editCategory() {
 void CategoryController::deleteCategory() {
 	int option;
 	bool status = true;
+	string info = "DELETE CATEGORY\nPress ESC to cancel the operation.\n";
 	do {
-		cout << "\t \t \t DELETE CATEGORY" << endl;
-		cout << "\tEnter the number of the category you want to delete: \t";
-		cin >> option;
-		option -= 1;
+		viewCategoryList();
+		ConsoleIO::out("\n" + info);
+		string numIn = ConsoleIO::in("Please, enter the number of category:", NUMBER, 3, false, false, true);
+		if (numIn == " ") return;
+		option = stoi(numIn) - 1;
 
-		if (option >= 0 && option < categoryList.size())
-		{
-			status = false;
-		}
-		else {
-			cout << endl << endl;
-			cout << "\tTHE CATEGORY NUMBER DOES NOT EXIST. \t"<<endl;
-		}
-		
+		if (option >= 0 && option < categoryList.size()) status = false;
+
 	} while (status);
 
 	categoryList.erase(categoryList.begin() + option);

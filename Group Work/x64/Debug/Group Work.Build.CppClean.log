@@ -1,47 +1,35 @@
-h:\software design\budgetmanagement\group work\x64\debug\group work.pch
-h:\software design\budgetmanagement\group work\x64\debug\pch.sbr
-h:\software design\budgetmanagement\group work\x64\debug\pch.obj
-h:\software design\budgetmanagement\group work\x64\debug\vc141.pdb
-h:\software design\budgetmanagement\group work\x64\debug\vc141.idb
-h:\software design\budgetmanagement\group work\x64\debug\authorization.sbr
-h:\software design\budgetmanagement\group work\x64\debug\budget.sbr
-h:\software design\budgetmanagement\group work\x64\debug\category.sbr
-h:\software design\budgetmanagement\group work\x64\debug\categorycontroller.sbr
-h:\software design\budgetmanagement\group work\x64\debug\consoleio.sbr
-h:\software design\budgetmanagement\group work\x64\debug\dataconverter.sbr
-h:\software design\budgetmanagement\group work\x64\debug\datareader.sbr
-h:\software design\budgetmanagement\group work\x64\debug\encryptdecrypt.sbr
-h:\software design\budgetmanagement\group work\x64\debug\application.sbr
-h:\software design\budgetmanagement\group work\x64\debug\menu.sbr
-h:\software design\budgetmanagement\group work\x64\debug\normaltransaction.sbr
-h:\software design\budgetmanagement\group work\x64\debug\recurringtransaction.sbr
-h:\software design\budgetmanagement\group work\x64\debug\time.sbr
-h:\software design\budgetmanagement\group work\x64\debug\transaction.sbr
-h:\software design\budgetmanagement\group work\x64\debug\user.sbr
-h:\software design\budgetmanagement\group work\x64\debug\user.obj
-h:\software design\budgetmanagement\group work\x64\debug\transaction.obj
-h:\software design\budgetmanagement\group work\x64\debug\time.obj
-h:\software design\budgetmanagement\group work\x64\debug\recurringtransaction.obj
-h:\software design\budgetmanagement\group work\x64\debug\normaltransaction.obj
-h:\software design\budgetmanagement\group work\x64\debug\menu.obj
-h:\software design\budgetmanagement\group work\x64\debug\application.obj
-h:\software design\budgetmanagement\group work\x64\debug\encryptdecrypt.obj
-h:\software design\budgetmanagement\group work\x64\debug\datareader.obj
-h:\software design\budgetmanagement\group work\x64\debug\dataconverter.obj
-h:\software design\budgetmanagement\group work\x64\debug\consoleio.obj
-h:\software design\budgetmanagement\group work\x64\debug\categorycontroller.obj
-h:\software design\budgetmanagement\group work\x64\debug\category.obj
-h:\software design\budgetmanagement\group work\x64\debug\budget.obj
-h:\software design\budgetmanagement\group work\x64\debug\authorization.obj
-h:\software design\budgetmanagement\x64\debug\group work.ilk
-h:\software design\budgetmanagement\x64\debug\group work.exe
-h:\software design\budgetmanagement\x64\debug\group work.pdb
-h:\software design\budgetmanagement\x64\debug\group work.bsc
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\bscmake.command.1.tlog
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\bscmake.read.1.tlog
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\cl.command.1.tlog
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\cl.read.1.tlog
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\cl.write.1.tlog
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\link.command.1.tlog
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\link.read.1.tlog
-h:\software design\budgetmanagement\group work\x64\debug\group work.tlog\link.write.1.tlog
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\group work.pch
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\vc141.pdb
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\vc141.idb
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\pch.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\pch.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\authorization.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\category.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\categorycontroller.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\consoleio.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\dataconverter.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\encryptdecrypt.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\application.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\menu.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\normaltransaction.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\recurringtransaction.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\time.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\transaction.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\transactioncontroller.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\user.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\user.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\transactioncontroller.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\transaction.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\time.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\recurringtransaction.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\normaltransaction.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\application.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\encryptdecrypt.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\dataconverter.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\consoleio.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\categorycontroller.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\category.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\authorization.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\group work.tlog\cl.command.1.tlog
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\group work.tlog\cl.read.1.tlog
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\group work.tlog\cl.write.1.tlog

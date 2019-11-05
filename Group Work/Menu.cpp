@@ -8,29 +8,25 @@ using namespace std;
 
 void Menu::startMenu() {
 	int menuChoice;
-	cout << ">> Menu" <<endl;
 
-	cout << "1. Transaction" << endl;
-	cout << "2. Category  " << endl;
-	cout << "3. Report " << endl;
+	categoryController.setCategoryList(dc->convertToCategory());
+	transactionController.setNormalTransactionList(dc->convertToNormalTransaction(categoryController.getCategoryList()));
 
-	cout << "\n \t Enter your choice: ";
-	cin >> menuChoice;
+	ConsoleIO::out("MENU:\n1. Transaction\n2. Category\n3. Report\n", true);
+	string out = "Please, choose menu item:";
 
-	cout << endl <<endl;
+	menuChoice = stoi(ConsoleIO::in(out, NUMBER, 1));
 
 	switch (menuChoice) {
-	case 1: "Transaction";
+	case 1:
+		transactionController.transactionFunctionMenu(dc, categoryController.getCategoryList());
 		break;
 	case 2: 
-		categoryController.setCategoryList(dc->convertToCategory());
 		categoryController.categoryFunctionMenu(dc);
 		break;
-	case 3: "Report";
+	case 3: // Report
 		break;
-	default: cout << "THE VALUE YOU HAVE ENTERED IS INCORRECT.!!!!!!" << endl << endl;
 	}
-	
 	startMenu();
 }
 
