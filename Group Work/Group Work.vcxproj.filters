@@ -47,7 +47,9 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Controller</Filter>
     </ClCompile>
-    <ClCompile Include="RecurringProcess.cpp" />
+    <ClCompile Include="RecurringProcess.cpp">
+      <Filter>Extra files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.h">
@@ -107,7 +109,9 @@
     <ClInclude Include="RepeatType.h">
       <Filter>Header files</Filter>
     </ClInclude>
-    <ClInclude Include="RecurringProcess.h" />
+    <ClInclude Include="RecurringProcess.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header files">
