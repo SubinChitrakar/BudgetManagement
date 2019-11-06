@@ -91,6 +91,7 @@
     <ClInclude Include="TransactionController.h">
       <Filter>Header files</Filter>
     </ClInclude>
+    <ClInclude Include="RepeatType.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data.json" />

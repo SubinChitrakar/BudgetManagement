@@ -170,6 +170,7 @@
     <ClInclude Include="NormalTransaction.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RecurringTransaction.h" />
+    <ClInclude Include="RepeatType.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="Transaction.h" />
     <ClInclude Include="TransactionController.h" />

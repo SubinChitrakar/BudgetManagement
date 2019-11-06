@@ -9,6 +9,7 @@
 #include "User.h"
 #include "Category.h"
 #include "NormalTransaction.h"
+#include "RecurringTransaction.h"
 
 using nlohmann::json;
 using namespace std;
@@ -23,7 +24,9 @@ public:
 	DataConverter(json& json, EncryptDecrypt& ecd) : j(json),ec(ecd) {};
 	vector<Category> convertToCategory();
 	vector<NormalTransaction> convertToNormalTransaction(vector<Category>& catList);
+	vector<RecurringTransaction> convertToRecurringTransaction(vector<Category>& catList);
 	void convertFromCategory(vector<Category> categoryList);
 	void convertFromNormalTransaction(vector<NormalTransaction>& normalTransactionList);
+	void convertFromRecurringTransaction(vector<RecurringTransaction>& recurringTransactionList);
 };
 

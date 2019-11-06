@@ -14,11 +14,14 @@ class TransactionController
 {
 private:
 	vector<NormalTransaction> normalTransactionList;
-	void viewTransactionList();
+	vector<RecurringTransaction> recurringTransactionList;
+	void viewNormalTransactionList();
+	void viewRecurringTransactionList();
 	void addTransaction(vector<Category>& cat);
-	void editTransaction();
-	void deleteTransaction();
-	void getNormalTransactionInput(Transaction& tr, string& info);
+	void editTransaction(vector<Category>& cat);
+	void deleteNormalTransaction();
+	void deleteRecurringTransaction();
+	string getRecurringTransactionInput(NormalTransaction& tr, string& info);
 public:
 	void setNormalTransactionList(vector<NormalTransaction> JSONTransactionList) {
 		if (normalTransactionList.size() == 0)
@@ -26,9 +29,12 @@ public:
 			normalTransactionList = JSONTransactionList;
 		}
 	}
-
-	vector<NormalTransaction> getNormalTransactionList() {
-		return normalTransactionList;
+	
+	void setRecurringTransactionList(vector<RecurringTransaction> JSONTransactionList) {
+		if (recurringTransactionList.size() == 0)
+		{
+			recurringTransactionList = JSONTransactionList;
+		}
 	}
 
 	void transactionFunctionMenu(DataConverter* dc, vector<Category>& cat);

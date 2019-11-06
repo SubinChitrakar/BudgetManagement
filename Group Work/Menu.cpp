@@ -11,6 +11,7 @@ void Menu::startMenu() {
 
 	categoryController.setCategoryList(dc->convertToCategory());
 	transactionController.setNormalTransactionList(dc->convertToNormalTransaction(categoryController.getCategoryList()));
+	transactionController.setRecurringTransactionList(dc->convertToRecurringTransaction(categoryController.getCategoryList()));
 
 	ConsoleIO::out("MENU:\n1. Transaction\n2. Category\n3. Report\n", true);
 	string out = "Please, choose menu item:";
