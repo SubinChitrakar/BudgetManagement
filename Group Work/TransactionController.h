@@ -37,6 +37,8 @@ public:
 		}
 	}
 
+	vector<NormalTransaction>& getNormalTransactionList() { return normalTransactionList; }
+
 	void transactionFunctionMenu(DataConverter* dc, vector<Category>& cat);
 };
 

@@ -368,7 +368,7 @@ void TransactionController::deleteNormalTransaction(){
 	do {
 		viewNormalTransactionList();
 		ConsoleIO::out("\n" + info);
-		string val = ConsoleIO::in("Do you really want to delete \"[" + to_string(++option) + string("] ") + normalTransactionList.at(option).getTransactionName() + string("\" transaction?\n1. Yes\n2. No"), NUMBER, 1, false, false, true);
+		string val = ConsoleIO::in("Do you really want to delete \"[" + to_string(option + 1) + string("] ") + normalTransactionList.at(option).getTransactionName() + string("\" transaction?\n1. Yes\n2. No"), NUMBER, 1, false, false, true);
 		if (val == " " || val == "2") return;
 		else if (val == "1") {
 			status = false;
@@ -397,11 +397,11 @@ void TransactionController::deleteRecurringTransaction(){
 	do {
 		viewRecurringTransactionList();
 		ConsoleIO::out("\n" + info);
-		string val = ConsoleIO::in("Do you really want to delete \"[" + to_string(++option) + string("] ") + recurringTransactionList.at(option).getTransactionName() + string("\" transaction?\n1. Yes\n2. No"), NUMBER, 1, false, false, true);
+		string val = ConsoleIO::in("Do you really want to delete \"[" + to_string(option+1) + string("] ") + recurringTransactionList.at(option).getTransactionName() + string("\" transaction?\n1. Yes\n2. No"), NUMBER, 1, false, false, true);
 		if (val == " " || val == "2") return;
 		else if (val == "1") {
-			status = false;
 			recurringTransactionList.erase(recurringTransactionList.begin() + option);
+			status = false;
 		}
 	} while (status);
 }

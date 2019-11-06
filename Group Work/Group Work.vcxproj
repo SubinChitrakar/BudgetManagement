@@ -171,6 +171,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="RecurringTransaction.h" />
     <ClInclude Include="RepeatType.h" />
+    <ClInclude Include="ReportController.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="Transaction.h" />
     <ClInclude Include="TransactionController.h" />
@@ -193,13 +194,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RecurringTransaction.cpp" />
+    <ClCompile Include="ReportController.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="Transaction.cpp" />
     <ClCompile Include="TransactionController.cpp" />
     <ClCompile Include="User.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="data.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

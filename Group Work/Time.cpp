@@ -20,7 +20,7 @@ string getNameOfTheDay(int dayOfTheWeek) {
 		break;
 	case 4: nameOfTheDay = "Wednesday";
 		break;
-	case 5: nameOfTheDay = "Thrusday";
+	case 5: nameOfTheDay = "Thursday";
 		break;
 	case 6: nameOfTheDay = "Friday";
 		break;
@@ -100,8 +100,8 @@ void Time::convertToDate(string date) {
 	string year = date;
 
 	newtime.tm_mday = stoi(day);
-	newtime.tm_mon = stoi(month);
-	newtime.tm_year = stoi(year);
+	newtime.tm_mon = stoi(month) - 1;
+	newtime.tm_year = stoi(year) - 1900;
 
 }
 

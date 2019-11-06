@@ -1,1 +1,4 @@
-﻿  Group Work.vcxproj -> C:\Users\User\Desktop\Courseworks\Advanced Software Design\BudgetManagement\x64\Debug\Group Work.exe
+﻿  ReportController.cpp
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\reportcontroller.cpp(50): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\reportcontroller.cpp(51): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Group Work.vcxproj -> C:\Users\User\Desktop\Courseworks\Advanced Software Design\BudgetManagement\x64\Debug\Group Work.exe

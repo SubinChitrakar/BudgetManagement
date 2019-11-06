@@ -18,6 +18,17 @@ EncryptDecrypt ecd;
 
 int main()
 {
+	
+	/*Time time;
+	time.convertToDate("35/15/2019");
+	
+	cout << time.getDay() << endl;
+	cout << time.getMonth() << endl;
+	cout << time.getYear() << endl;
+
+	string s;
+	cin >> s;*/
+
 	Authorization* auth = new Authorization(ecd);
 	string data = ecd.getData();
 	json j = json::parse(data);
@@ -26,7 +37,4 @@ int main()
 
 	Menu* menu = new Menu(dc);
 	menu->startMenu();
-
-	
-
 }

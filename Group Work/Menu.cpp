@@ -25,7 +25,8 @@ void Menu::startMenu() {
 	case 2: 
 		categoryController.categoryFunctionMenu(dc);
 		break;
-	case 3: // Report
+	case 3:
+		reportController.reportFunctionMenu(dc, categoryController.getCategoryList(), transactionController.getNormalTransactionList());
 		break;
 	}
 	startMenu();
