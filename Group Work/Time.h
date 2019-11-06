@@ -18,7 +18,9 @@ public:
 	int getMonth();
 	int getYear();
 
-	void addDay(int i) { newtime.tm_mday += i; };
+	void setDay(int i) { newtime.tm_mday = i; };
+	void setMonth(int i) { newtime.tm_mon = i; };
+	void setYear(int i) { newtime.tm_year = i; };
 
 	void convertToDate(string date);
 	void convertToTime(string time);

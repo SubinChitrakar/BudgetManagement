@@ -10,12 +10,7 @@ void RecurringProcess::runProcess(DataConverter* dc, vector<RecurringTransaction
 	user->setLastAccessTime(to_string(time->getHour()) + ":" + to_string(time->getMinute()));
 	dc->convertFromUser(*user);
 
-	Time* first = new Time();
-	first->convertToDate("25/11/2019");
-	for (int i = 0; i < 10; i++) {
-		first->addDay(1);
-		cout << first->getDay() << endl;
-	}
+	
 
 	cout << "";
 }
