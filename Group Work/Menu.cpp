@@ -13,7 +13,7 @@ void Menu::startMenu() {
 	transactionController.setNormalTransactionList(dc->convertToNormalTransaction(categoryController.getCategoryList()));
 	transactionController.setRecurringTransactionList(dc->convertToRecurringTransaction(categoryController.getCategoryList()));
 
-	recurringProcess.runProcess(dc, transactionController.getRecurringTransactionList(), transactionController.getNormalTransactionList(), categoryController.getCategoryList());
+	recurringProcess.runProcess(dc, &transactionController.getRecurringTransactionList(), &transactionController.getNormalTransactionList(), &categoryController.getCategoryList());
 
 	ConsoleIO::out("MAIN MENU:\n1. Transaction\n2. Category\n3. Report\n4. Quit", true);
 	string out = "Please, choose menu item:";

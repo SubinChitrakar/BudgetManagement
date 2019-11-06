@@ -19,8 +19,8 @@ public:
 	int getYear();
 
 	void setDay(int i) { newtime.tm_mday = i; };
-	void setMonth(int i) { newtime.tm_mon = i; };
-	void setYear(int i) { newtime.tm_year = i; };
+	void setMonth(int i) { newtime.tm_mon = i - 1; };
+	void setYear(int i) { newtime.tm_year = i - 1900; };
 
 	void convertToDate(string date);
 	void convertToTime(string time);
