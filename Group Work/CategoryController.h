@@ -1,3 +1,4 @@
+#pragma once
 #include "Category.h"
 #include <iostream>
 #include <sstream>

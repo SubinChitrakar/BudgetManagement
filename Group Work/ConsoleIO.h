@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <conio.h>
 #include "InputTypes.h"
+#include <vector>
 
 using namespace std;
 
@@ -20,5 +21,7 @@ public:
 	static void out(string data = "", bool clear = false);
 	static string in(string data, InputTypes type = TEXT, int size = 100, bool isEnter = false, bool isSecret = false, bool isEsc = false);
 	static string dbl(double num);
+	static bool valDate(string date);
+	static bool valTime(string time);
 };
 

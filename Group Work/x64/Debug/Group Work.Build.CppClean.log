@@ -23,6 +23,7 @@ c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\grou
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\time.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\recurringtransaction.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\normaltransaction.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\menu.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\application.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\encryptdecrypt.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\dataconverter.obj
@@ -30,11 +31,13 @@ c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\grou
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\categorycontroller.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\category.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\authorization.obj
-c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\menu.obj
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\reportcontroller.sbr
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\reportcontroller.obj
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\x64\debug\group work.exe
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\x64\debug\group work.ilk
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\x64\debug\group work.pdb
-c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\normaltransaction.new.obj.enc
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\application.obj.enc
+c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\transactioncontroller.new.obj.enc
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\x64\debug\group work.bsc
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\group work.tlog\bscmake.command.1.tlog
 c:\users\user\desktop\courseworks\advanced software design\budgetmanagement\group work\x64\debug\group work.tlog\bscmake.read.1.tlog

@@ -10,7 +10,7 @@ void ReportController::reportFunctionMenu(DataConverter * dc, vector<Category>& 
 	
 	showReport(dc, cat, ntr);
 
-	string val = ConsoleIO::in("1.<Year  2.<Month  3.>Month  4.>Year  ESC.Go back\n", NUMBER, 1, false, false, true);
+	string val = ConsoleIO::in("1.[<]Year  2.[<]Month  3.[>]Month  4.[>]Year  ESC.Go back\n", NUMBER, 1, false, false, true);
 	if (val == " ") return;
 	else {
 		switch (stoi(val))
@@ -71,12 +71,19 @@ void ReportController::showReport(DataConverter * dc, vector<Category>& cat, vec
 
 	for (int t = 0; t < catSize; t++) {
 		int col = t + 1;
+
+		double two = total[t];
+		if (two != 0) if (cat[t].getType() == "Expense") two = -1 * total[t];
+
+		double three = cat[t].getLimit() - total[t];
+		//if (three < 0) three *= -1;
+ 
 		table[col][0] = cat[t].getCategoryName();
-		table[col][1] = ConsoleIO::dbl((cat[t].getType() == "Income") ? cat[t].getLimit() : (-1 * cat[t].getLimit()));
-		table[col][2] = ConsoleIO::dbl((cat[t].getType() == "Income") ? total[t] : (-1 * total[t]));
-		table[col][3] = ConsoleIO::dbl(cat[t].getLimit() - total[t]);
+		table[col][1] = ConsoleIO::dbl(cat[t].getLimit());
+		table[col][2] = ConsoleIO::dbl(two);
+		table[col][3] = ConsoleIO::dbl(three);
 	}
 
-	ConsoleIO::out({}, true);
+	ConsoleIO::out("Report for " + to_string(filter->getMonth()) + "/" + to_string(filter->getYear()) + ":\n", true);
 	cout << table << endl;
 }

@@ -3,6 +3,11 @@
 
 using namespace std;
 
+User* DataConverter::convertToUser() {
+	User* user = new User(j["user"]);
+	return user;
+}
+
 vector<Category> DataConverter::convertToCategory() {
 	vector<Category> cat = {};
 	for (json::iterator it = j["categories"].begin(); it != j["categories"].end(); ++it) {
@@ -64,5 +69,10 @@ void DataConverter::convertFromRecurringTransaction(vector<RecurringTransaction>
 	for (auto i = recurringTransactionList.begin(); i != recurringTransactionList.end(); ++i) {
 		j["transactions"]["recurring"].push_back((*i).getRecurringTransaction());
 	}
+	saveData();
+}
+
+void DataConverter::convertFromUser(User& user) {
+	j["user"] = user.getUser();
 	saveData();
 }

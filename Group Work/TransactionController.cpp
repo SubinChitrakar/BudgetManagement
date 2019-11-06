@@ -100,15 +100,22 @@ void TransactionController::addTransaction(vector<Category>& cat){
 		}
 	} while (status);
 
-	ConsoleIO::out(info, true);
-	val = ConsoleIO::in("Enter the date for the transaction (DD/MM/YYYY): ", TEXT, 12, false, false, true);
-	if (val == " ") return;
-	else ntr->setDate(val);
-	
-	ConsoleIO::out(info, true);
-	val = ConsoleIO::in("Enter the time of the transaction (HH:MM): ", TEXT, 7, false, false, true);
-	if (val == " ") return;
-	else ntr->setTime(val);
+	status = true;
+	do {
+		ConsoleIO::out(info, true);
+		val = ConsoleIO::in("Enter the date for the transaction (DD/MM/YYYY): ", TEXT, 12, false, false, true);
+		if (val == " ") return;
+		else if (ConsoleIO::valDate(val)) { ntr->setDate(val); status = false; }
+	} while (status);
+
+
+	status = true;
+	do {
+		ConsoleIO::out(info, true);
+		val = ConsoleIO::in("Enter the time of the transaction (HH:MM): ", TEXT, 7, false, false, true);
+		if (val == " ") return;
+		else if (ConsoleIO::valTime(val)) { ntr->setTime(val);  status = false; }
+	} while (status);
 
 	status = true;
 	do

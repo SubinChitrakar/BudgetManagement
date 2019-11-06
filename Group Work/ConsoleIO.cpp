@@ -89,6 +89,45 @@ string ConsoleIO::dbl(double num) {
 	return string(a);
 }
 
+bool ConsoleIO::valDate(string date)
+{
+	int pos = 0;
+	int day, month, year;
+	vector<string> out;
+	while ((pos = date.find('/')) != string::npos) {
+		out.push_back(date.substr(0, pos));
+		date.erase(0, pos + 1);
+	}
+
+	if (out.size() != 2) return false;
+
+	try	{ day = stoi(out.at(0)); } catch (const std::exception&) { return false; }
+	try	{ month = stoi(out.at(1)); } catch (const std::exception&) { return false; }
+	try	{ year = stoi(date); } catch (const std::exception&) { return false; }
+
+	if (day > 31 || day < 1) return false;
+	if (month > 12 || month < 1) return false;
+	if (year > 2100 || year < 1900) return false;
+	
+	return true;
+}
+
+bool ConsoleIO::valTime(string time)
+{
+	int pos = time.find(':');
+	string hour = time.substr(0, pos);
+	string minute = time.substr(pos + 1);
+	int hr, mt;
+
+	try { hr = stoi(hour); } catch (const std::exception&) { return false; }
+	try { mt = stoi(minute); } catch (const std::exception&) { return false; }
+
+	if (hr > 23 || hr < 0) return false;
+	if (mt > 59 || mt < 0) return false;
+	
+	return true;
+}
+
 void ConsoleIO::checkType(InputTypes &type) {
 	switch (type)
 	{

@@ -18,7 +18,7 @@ private:
 	string filename = "./data";
 	int keySize;
 	string decryptedData;
-	string defaultData = "{\"user\":{\"last_access\":\"\",\"password\":\"%s\"},\"categories\":[{\"id\":1,\"name\":\"Transport\",\"type\":\"Expense\",\"limit\":100},{\"id\":2,\"name\":\"Salary\",\"type\":\"Income\",\"limit\": 100}],\"transactions\":{\"normal\":[], \"recurring\":[]}}";
+	string defaultData = "{\"user\":{\"last_access_date\":\"\",\"last_access_time\":\"\",\"password\":\"%s\"},\"categories\":[{\"id\":1,\"name\":\"Transport\",\"type\":\"Expense\",\"limit\":100},{\"id\":2,\"name\":\"Salary\",\"type\":\"Income\",\"limit\": 100}],\"transactions\":{\"normal\":[], \"recurring\":[]}}";
 public:
 	string& getData() { return decryptedData; };
 	bool checkFile();

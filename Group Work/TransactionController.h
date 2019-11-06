@@ -38,6 +38,7 @@ public:
 	}
 
 	vector<NormalTransaction>& getNormalTransactionList() { return normalTransactionList; }
+	vector<RecurringTransaction>& getRecurringTransactionList() { return recurringTransactionList; }
 
 	void transactionFunctionMenu(DataConverter* dc, vector<Category>& cat);
 };

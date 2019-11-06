@@ -96,10 +96,12 @@ void CategoryController::editCategory() {
 	string info = "EDIT CATEGORY";
 	string info_2 = "\nPress ESC to cancel the operation.\n";
 
+	int size = to_string(categoryList.size()).size();
+
 	do {
 		viewCategoryList();
 		ConsoleIO::out("\n" + info + info_2);
-		string numIn = ConsoleIO::in("Please, enter the number of category:", NUMBER, 3, false, false, true);
+		string numIn = ConsoleIO::in("Please, enter the number of category:", NUMBER, size, false, false, true);
 
 		if (numIn == " ") return;
 
@@ -150,10 +152,13 @@ void CategoryController::deleteCategory() {
 	int option;
 	bool status = true;
 	string info = "DELETE CATEGORY\nPress ESC to cancel the operation.\n";
+
+	int size = to_string(categoryList.size()).size();
+
 	do {
 		viewCategoryList();
 		ConsoleIO::out("\n" + info);
-		string numIn = ConsoleIO::in("Please, enter the number of category:", NUMBER, 3, false, false, true);
+		string numIn = ConsoleIO::in("Please, enter the number of category:", NUMBER, size, false, false, true);
 		if (numIn == " ") return;
 		option = stoi(numIn) - 1;
 
@@ -161,6 +166,16 @@ void CategoryController::deleteCategory() {
 
 	} while (status);
 
-	categoryList.erase(categoryList.begin() + option);
+	status = true;
+	do {
+		viewCategoryList();
+		ConsoleIO::out("\n" + info);
+		string val = ConsoleIO::in("Do you really want to delete \"[" + to_string(option + 1) + string("] ") + categoryList.at(option).getCategoryName() + string("\" category?\n1. Yes\n2. No"), NUMBER, 1, false, false, true);
+		if (val == " " || val == "2") return;
+		else if (val == "1") {
+			categoryList.erase(categoryList.begin() + option);
+			status = false;
+		}
+	} while (status);
 }
 

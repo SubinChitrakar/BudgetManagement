@@ -1,3 +1,4 @@
+#pragma once
 #include<string>
 #include <ctime> 
 #include <iostream>
@@ -13,22 +14,12 @@ public:
 	Time();
 	int getMinute();
 	int getHour();
-	string getCurrentTime();
-
-	string getDayofWeek();
-	
 	int getDay();
 	int getMonth();
 	int getYear();
-	string getCurrentDate();
 
-	string findDayOfWeek(int day, int month, int year);
-
-	string getCurrentDateAndTime();
-
+	void addDay(int i) { newtime.tm_mday += i; };
 
 	void convertToDate(string date);
 	void convertToTime(string time);
-
-	tm getNewTime() { return newtime; }
 };

@@ -169,6 +169,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="NormalTransaction.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RecurringProcess.h" />
     <ClInclude Include="RecurringTransaction.h" />
     <ClInclude Include="RepeatType.h" />
     <ClInclude Include="ReportController.h" />
@@ -193,6 +194,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="RecurringProcess.cpp" />
     <ClCompile Include="RecurringTransaction.cpp" />
     <ClCompile Include="ReportController.cpp" />
     <ClCompile Include="Time.cpp" />
