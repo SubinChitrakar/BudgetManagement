@@ -44,7 +44,18 @@ void RecurringProcess::runProcess(DataConverter* dc, vector<RecurringTransaction
 				nt->setAmount(rtr->at(k).getAmount());
 				nt->setCategory(rtr->at(k).getCategory());
 				nt->setNote(rtr->at(k).getNote());
-				nt->setDate(rtr->at(k).getDate());
+				Time* tmp = new Time();
+				tmp->convertToDate(rtr->at(k).getDate());
+				if (rtr->at(k).getRepeat() == DAILY) {
+					tmp->setDay(tmp->getDay() + 1);
+					days.at(1) = getCount(tmp->getYear());
+					if (tmp->getDay() > days.at(tmp->getMonth() - 1)) { tmp->setDay(1); tmp->setMonth(tmp->getMonth() + 1); }
+				}
+				else {
+					tmp->setMonth(tmp->getMonth() + 1);
+				}
+				if (tmp->getMonth() > 12) { tmp->setMonth(1); tmp->setYear(tmp->getYear() + 1); }
+				nt->setDate(tmp->convertDateToString());
 				nt->setTime(rtr->at(k).getTime());
 				ntr->push_back(*nt);
 			}

@@ -212,12 +212,12 @@ void TransactionController::editTransaction(vector<Category>& cat){
 	else if (val.size() > 0) ntr.setTransactionName(val);
 
 	ConsoleIO::out(info + ": " + ntr.getTransactionName() + info_2, true);
-	val = ConsoleIO::in("Enter the amount of the transaction (press Enter to leave current name):", AMOUNT, 8, true, false, true);
+	val = ConsoleIO::in("Enter the amount of the transaction (press Enter to leave current amount):", AMOUNT, 8, true, false, true);
 	if (val == " ") return;
 	else if (val.size() > 0) ntr.setAmount(stod(val));
 
 	ConsoleIO::out(info + ": " + ntr.getTransactionName() + info_2, true);
-	val = ConsoleIO::in("Enter the note for the transaction (press Enter to leave current name): ", TEXT, 100, true, false, true);
+	val = ConsoleIO::in("Enter the note for the transaction (press Enter to leave current note): ", TEXT, 100, true, false, true);
 	if (val == " ") return;
 	else if (val.size() > 0) ntr.setNote(val);
 
@@ -225,7 +225,7 @@ void TransactionController::editTransaction(vector<Category>& cat){
 	do
 	{
 		ConsoleIO::out(info + ": " + ntr.getTransactionName() + info_2, true);
-		val = ConsoleIO::in("Select the transaction type (press Enter to leave current name):\n1. Income\n2. Expense", NUMBER, 1, true, false, true);
+		val = ConsoleIO::in("Select the transaction type (press Enter to leave current type):\n1. Income\n2. Expense", NUMBER, 1, true, false, true);
 		if (val == " ") return;
 		else if (val.size() == 0) {
 			type = ntr.getCategory()->getType();
@@ -256,7 +256,7 @@ void TransactionController::editTransaction(vector<Category>& cat){
 	do {
 		int size = to_string(catShow.size()).size();
 		ConsoleIO::out(info + ": " + ntr.getTransactionName() + info_2, true);
-		if (type == ntr.getCategory()->getType()) val = ConsoleIO::in("Choose the transaction category (press Enter to leave current name):" + catList, NUMBER, size, true, false, true);
+		if (type == ntr.getCategory()->getType()) val = ConsoleIO::in("Choose the transaction category (press Enter to leave current category):" + catList, NUMBER, size, true, false, true);
 		else  val = ConsoleIO::in("Choose the transaction category:" + catList, NUMBER, size, false, false, true);
 		if (val == " ") return;
 		else if (val.size() > 0) {
@@ -269,12 +269,12 @@ void TransactionController::editTransaction(vector<Category>& cat){
 	} while (status);
 
 	ConsoleIO::out(info + ": " + ntr.getTransactionName() + info_2, true);
-	val = ConsoleIO::in("Enter the date for the transaction (DD/MM/YYYY) (press Enter to leave current name): ", TEXT, 12, true, false, true);
+	val = ConsoleIO::in("Enter the date for the transaction (DD/MM/YYYY) (press Enter to leave current date): ", TEXT, 12, true, false, true);
 	if (val == " ") return;
 	else if (val.size() > 0) ntr.setDate(val);
 
 	ConsoleIO::out(info + ": " + ntr.getTransactionName() + info_2, true);
-	val = ConsoleIO::in("Enter the time of the transaction (HH:MM) (press Enter to leave current name): ", TEXT, 7, true, false, true);
+	val = ConsoleIO::in("Enter the time of the transaction (HH:MM) (press Enter to leave current time): ", TEXT, 7, true, false, true);
 	if (val == " ") return;
 	else if (val.size() > 0) ntr.setTime(val);
 

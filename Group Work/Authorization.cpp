@@ -17,5 +17,6 @@ void Authorization::getPassword() {
 		string st = (mistakes == 0) ? "Please, enter your password:" : "Please, enter valid password:";
 		pw = ConsoleIO::in(st, TEXT, 100, false, true);
 		mistakes++;
+		ConsoleIO::out("", true);
 	} while (!ed.checkPassword(pw));
 }

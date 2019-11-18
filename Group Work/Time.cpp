@@ -52,6 +52,11 @@ void Time::convertToDate(string date) {
 
 }
 
+string Time::convertDateToString() {
+	string currentDate = to_string(getDay()) + "/" + to_string(getMonth()) + "/" + to_string(getYear());
+	return currentDate;
+}
+
 void Time::convertToTime(string time) {
 	string delimiterForDate = ":";
 	

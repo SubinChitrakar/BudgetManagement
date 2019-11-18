@@ -24,4 +24,6 @@ public:
 
 	void convertToDate(string date);
 	void convertToTime(string time);
+
+	string convertDateToString();
 };
